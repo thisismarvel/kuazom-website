@@ -1,0 +1,61 @@
+import { Analytics } from '@vercel/analytics/next'
+import type { Metadata, Viewport } from 'next'
+import { Poppins, Inter } from 'next/font/google'
+import './globals.css'
+
+const poppins = Poppins({
+  variable: '--font-poppins',
+  weight: ['500', '600', '700', '800'],
+  subsets: ['latin'],
+})
+const inter = Inter({ variable: '--font-inter', subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Kuazom Vending Services | Smart Healthy Vending Machines in GTA, Canada',
+  description:
+    'Kuazom Vending Services installs smart, touchscreen vending machines with healthy snacks and drinks for schools, offices, hospitals, and facilities across the Greater Toronto Area. Call 905-302-VEND.',
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
+  },
+}
+
+export const viewport: Viewport = {
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${poppins.variable} ${inter.variable} bg-background`}
+    >
+      <body className="font-sans antialiased">
+        {children}
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
+    </html>
+  )
+}
