@@ -15,7 +15,7 @@ const jsonLd = {
   name: 'Kuazom Vending Services',
   description:
     'Smart, touchscreen vending machines with healthy and nutritious snacks and drinks for facilities across the Greater Toronto Area.',
-  telephone: '+1-905-302-8363',
+  url: 'https://wa.link/td67yv',
   areaServed: {
     '@type': 'AdministrativeArea',
     name: 'Greater Toronto Area, Ontario, Canada',

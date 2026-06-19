@@ -5,11 +5,11 @@ import {
   Building2,
   Factory,
   HeartPulse,
-  Phone,
+  MessageCircle,
   School,
 } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
-import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site'
+import { WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 const trustItems = [
@@ -52,14 +52,16 @@ export function Hero() {
               Request a Free Quote
             </a>
             <a
-              href={PHONE_TEL}
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 buttonVariants({ size: 'lg', variant: 'outline' }),
                 'h-12 w-full rounded-full border-primary px-7 text-base font-semibold text-primary hover:bg-brand-tint hover:text-primary sm:w-auto',
               )}
             >
-              <Phone className="size-4" />
-              Call {PHONE_DISPLAY}
+              <MessageCircle className="size-4" />
+              {WHATSAPP_LABEL}
             </a>
           </div>
 

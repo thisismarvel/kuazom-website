@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { Menu, Phone, X } from 'lucide-react'
+import { Menu, MessageCircle, X } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
-import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL } from '@/lib/site'
+import { NAV_LINKS, WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 export function SiteNav() {
@@ -84,14 +84,16 @@ export function SiteNav() {
 
         <div className="flex items-center gap-2">
           <a
-            href={PHONE_TEL}
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               buttonVariants({ size: 'lg' }),
               'hidden rounded-full px-5 font-semibold sm:inline-flex',
             )}
           >
-            <Phone className="size-4" />
-            Call {PHONE_DISPLAY}
+            <MessageCircle className="size-4" />
+            {WHATSAPP_LABEL}
           </a>
           <button
             type="button"
@@ -120,14 +122,16 @@ export function SiteNav() {
             ))}
             <li className="py-3">
               <a
-                href={PHONE_TEL}
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={cn(
                   buttonVariants({ size: 'lg' }),
                   'w-full rounded-full font-semibold',
                 )}
               >
-                <Phone className="size-4" />
-                Call {PHONE_DISPLAY}
+                <MessageCircle className="size-4" />
+                {WHATSAPP_LABEL}
               </a>
             </li>
           </ul>

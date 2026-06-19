@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { CheckCircle2, Phone } from 'lucide-react'
+import { CheckCircle2, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Reveal } from '@/components/reveal'
-import { PHONE_DISPLAY, PHONE_SUB, PHONE_TEL } from '@/lib/site'
+import { WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
 
 const facilityTypes = [
   'School',
@@ -137,22 +137,21 @@ export function Contact() {
           <Reveal delay={120} className="lg:col-span-2">
             <div className="flex h-full flex-col justify-center rounded-2xl bg-primary p-8 text-primary-foreground">
               <h3 className="text-2xl font-bold font-[family-name:var(--font-poppins)]">
-                Prefer to talk?
+                Prefer to chat?
               </h3>
               <p className="mt-3 leading-relaxed text-primary-foreground/85">
-                Call us directly and we&apos;ll answer your questions and book a
-                free site assessment.
+                Message us on WhatsApp and we&apos;ll answer your questions and
+                book a free site assessment.
               </p>
               <a
-                href={PHONE_TEL}
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-3 rounded-full bg-background px-5 py-4 text-lg font-bold text-primary transition-transform hover:scale-[1.02]"
               >
-                <Phone className="size-5" />
-                {PHONE_DISPLAY}
+                <MessageCircle className="size-5" />
+                {WHATSAPP_LABEL}
               </a>
-              <p className="mt-3 text-sm text-primary-foreground/75">
-                {PHONE_SUB}
-              </p>
             </div>
           </Reveal>
         </div>

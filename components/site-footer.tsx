@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { MapPin, Phone } from 'lucide-react'
-import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL } from '@/lib/site'
+import { MapPin, MessageCircle } from 'lucide-react'
+import { NAV_LINKS, WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
 
 export function SiteFooter() {
   return (
@@ -50,11 +50,13 @@ export function SiteFooter() {
             Get in Touch
           </h3>
           <a
-            href={PHONE_TEL}
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 flex items-center gap-2 font-semibold text-background transition-colors hover:text-primary"
           >
-            <Phone className="size-4 text-primary" />
-            {PHONE_DISPLAY}
+            <MessageCircle className="size-4 text-primary" />
+            {WHATSAPP_LABEL}
           </a>
           <p className="mt-3 flex items-center gap-2 text-background/80">
             <MapPin className="size-4 text-primary" />
@@ -64,9 +66,12 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-background/15">
-        <div className="mx-auto max-w-7xl px-4 py-6 text-center text-sm text-background/60 sm:px-6 lg:px-8">
-          © {new Date().getFullYear()} Kuazom Vending Services. All rights
-          reserved. Designed and developed by Bainaray.
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-1 px-4 py-6 text-center text-sm text-background/60 sm:px-6 lg:px-8">
+          <p>
+            © {new Date().getFullYear()} Kuazom Vending Services. All rights
+            reserved.
+          </p>
+          <p>Designed and Developed by Bainaray</p>
         </div>
       </div>
     </footer>

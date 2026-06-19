@@ -1,6 +1,5 @@
-export const PHONE_DISPLAY = '905-302-VEND'
-export const PHONE_SUB = '(905-302-8363)'
-export const PHONE_TEL = 'tel:9053028363'
+export const WHATSAPP_LINK = 'https://wa.link/td67yv'
+export const WHATSAPP_LABEL = 'Chat on WhatsApp'
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
