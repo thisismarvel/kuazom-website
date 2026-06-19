@@ -16,21 +16,7 @@ export const metadata: Metadata = {
     'Kuazom Vending Services installs smart, touchscreen vending machines with healthy snacks and drinks for schools, offices, hospitals, and facilities across the Greater Toronto Area. Call 905-302-VEND.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: "kuazom-favicon.jpg",
   },
 }
 
