@@ -66,7 +66,7 @@ export function SiteFooter() {
       <div className="border-t border-background/15">
         <div className="mx-auto max-w-7xl px-4 py-6 text-center text-sm text-background/60 sm:px-6 lg:px-8">
           © {new Date().getFullYear()} Kuazom Vending Services. All rights
-          reserved.
+          reserved. Designed and developed by Bainaray.
         </div>
       </div>
     </footer>
