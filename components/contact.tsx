@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { CheckCircle2, MessageCircle } from 'lucide-react'
+import { CheckCircle2, Mail, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Reveal } from '@/components/reveal'
-import { WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
+import { EMAIL, EMAIL_LINK, WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
 
 const facilityTypes = [
   'School',
@@ -143,15 +143,24 @@ export function Contact() {
                 Message us on WhatsApp and we&apos;ll answer your questions and
                 book a free site assessment.
               </p>
-              <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-3 rounded-full bg-background px-5 py-4 text-lg font-bold text-primary transition-transform hover:scale-[1.02]"
-              >
-                <MessageCircle className="size-5" />
-                {WHATSAPP_LABEL}
-              </a>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex flex-1 items-center justify-center gap-3 rounded-full bg-background px-5 py-4 text-lg font-bold text-primary transition-transform hover:scale-[1.02]"
+                >
+                  <MessageCircle className="size-5" />
+                  Chat
+                </a>
+                <a
+                  href={EMAIL_LINK}
+                  className="inline-flex flex-1 items-center justify-center gap-3 rounded-full bg-background/20 px-5 py-4 text-lg font-bold text-background transition-colors hover:bg-background/30"
+                >
+                  <Mail className="size-5" />
+                  Email
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>

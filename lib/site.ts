@@ -1,5 +1,7 @@
 export const WHATSAPP_LINK = 'https://wa.link/td67yv'
 export const WHATSAPP_LABEL = 'Chat on WhatsApp'
+export const EMAIL = 'enquiries@kuazomvendingservices.ca'
+export const EMAIL_LINK = `mailto:${EMAIL}`
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },

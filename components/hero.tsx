@@ -5,11 +5,12 @@ import {
   Building2,
   Factory,
   HeartPulse,
+  Mail,
   MessageCircle,
   School,
 } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
-import { WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
+import { EMAIL, EMAIL_LINK, WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 const trustItems = [
@@ -62,6 +63,16 @@ export function Hero() {
             >
               <MessageCircle className="size-4" />
               {WHATSAPP_LABEL}
+            </a>
+            <a
+              href={EMAIL_LINK}
+              className={cn(
+                buttonVariants({ size: 'lg', variant: 'outline' }),
+                'h-12 w-full rounded-full border-primary px-7 text-base font-semibold text-primary hover:bg-brand-tint hover:text-primary sm:w-auto',
+              )}
+            >
+              <Mail className="size-4" />
+              Email
             </a>
           </div>
 

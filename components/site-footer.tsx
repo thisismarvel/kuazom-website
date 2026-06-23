@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { MapPin, MessageCircle } from 'lucide-react'
-import { NAV_LINKS, WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
+import { Mail, MapPin, MessageCircle } from 'lucide-react'
+import { EMAIL, EMAIL_LINK, NAV_LINKS, WHATSAPP_LABEL, WHATSAPP_LINK } from '@/lib/site'
 
 export function SiteFooter() {
   return (
@@ -57,6 +57,13 @@ export function SiteFooter() {
           >
             <MessageCircle className="size-4 text-primary" />
             {WHATSAPP_LABEL}
+          </a>
+          <a
+            href={EMAIL_LINK}
+            className="mt-3 flex items-center gap-2 font-semibold text-background transition-colors hover:text-primary"
+          >
+            <Mail className="size-4 text-primary" />
+            {EMAIL}
           </a>
           <p className="mt-3 flex items-center gap-2 text-background/80">
             <MapPin className="size-4 text-primary" />
